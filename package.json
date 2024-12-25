@@ -13,7 +13,7 @@
     "client:dev": "cd client && npm run dev",
     "build": "cd server && npm run build && cd ../client && npm run build",
     "seed": "cd server && npm run seed",
-    "render-build": "npm ci && npm run build"
+    "render-build": "npm ci && npm run build && npm run seed"
   },
   "keywords": [],
   "author": "",
