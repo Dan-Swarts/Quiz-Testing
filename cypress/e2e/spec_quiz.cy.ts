@@ -1,20 +1,18 @@
-import React from "react";
-import { questionSet1, questionSet2 } from "../questions.js";
-import Quiz from "../../client/src/components/Quiz.tsx";
+import { questionSet1, questionSet2 } from "../questions";
+const PORT = 3000; // ensure this port is correct for your testing
 
-describe("<Quiz />", () => {
+describe("Quiz", () => {
   beforeEach(() => {
     cy.intercept("GET", "/api/questions/random", questionSet1);
   });
 
-  it("renders", () => {
-    // see: https://on.cypress.io/mounting-react
-    cy.mount(<Quiz />);
+  it("visit the page", () => {
+    cy.visit(`http://localhost:${PORT}`);
   });
 
   it("shows the first question when clicking on the 'start quiz' button", () => {
     // mount the quiz component
-    cy.mount(<Quiz />);
+    cy.visit(`http://localhost:${PORT}`);
     // click on 'start quiz'
     cy.get(".btn-primary").click();
     // check for the correct value
@@ -24,7 +22,7 @@ describe("<Quiz />", () => {
 
   it("shows the multiple choice options when clicking on the 'start quiz' button", () => {
     // mount the quiz component
-    cy.mount(<Quiz />);
+    cy.visit(`http://localhost:${PORT}`);
     // click on 'start quiz'
     cy.get(".btn-primary").click();
 
@@ -38,7 +36,7 @@ describe("<Quiz />", () => {
   });
 
   it("shows all questions thoughout the quiz", () => {
-    cy.mount(<Quiz />);
+    cy.visit(`http://localhost:${PORT}`);
     cy.get(".btn-primary").click();
     // iterates though the questions:
     questionSet1.forEach((value) => {
@@ -50,7 +48,7 @@ describe("<Quiz />", () => {
   });
 
   it("shows all multiple choice options thoughout the quiz", () => {
-    cy.mount(<Quiz />);
+    cy.visit(`http://localhost:${PORT}`);
     cy.get(".btn-primary").click();
     // iterates though the questions:
     questionSet1.forEach((value) => {
@@ -67,7 +65,7 @@ describe("<Quiz />", () => {
   });
 
   it("shows your score at the end of a quiz", () => {
-    cy.mount(<Quiz />);
+    cy.visit(`http://localhost:${PORT}`);
     cy.get(".btn-primary").click();
 
     // skip to the end of the quiz
@@ -82,7 +80,7 @@ describe("<Quiz />", () => {
   });
 
   it("gives the correct score", () => {
-    cy.mount(<Quiz />);
+    cy.visit(`http://localhost:${PORT}`);
     cy.get(".btn-primary").click();
 
     let score = 0;
@@ -104,7 +102,7 @@ describe("<Quiz />", () => {
   });
 
   it("lets you take a second quiz", () => {
-    cy.mount(<Quiz />);
+    cy.visit(`http://localhost:${PORT}`);
     cy.get(".btn-primary").click();
 
     // skip to the end of the quiz
