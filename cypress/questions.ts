@@ -189,3 +189,27 @@ export const questionSet2 = [
     ],
   },
 ];
+
+export const shortQuiz = [
+  {
+    question: "What is the output of 'hello' + 'world'?",
+    answers: [
+      { text: "hello world", isCorrect: false },
+      { text: "helloworld", isCorrect: true },
+      { text: "hello+world", isCorrect: false },
+      { text: "hello world!", isCorrect: false },
+    ],
+  },
+  {
+    question: "What does the range function do?",
+    answers: [
+      { text: "Generates a list of numbers", isCorrect: true },
+      {
+        text: "Creates an iterator that generates a sequence of numbers",
+        isCorrect: true,
+      },
+      { text: "Creates a list of tuples", isCorrect: false },
+      { text: "Generates random numbers", isCorrect: false },
+    ],
+  },
+];
