@@ -10,7 +10,6 @@ Description
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features](#features)
 - [Tests](#tests)
 - [Credits](#credits)
 - [Contributing](#contributing)
@@ -52,48 +51,40 @@ npm run start
 
 ## Usage
 
-- step 1
+- visit [this url](https://quiz-testing.onrender.com/), then take a quiz
 
-![Add a screenshot](./relative/path/to/img.jpg?raw=true)
+![Taking a quiz on Python](./assets/takeQuizSlow.gif)
+<br>
+<br>
+<br>
 
-- step 2
+- When you finish, you can take another quiz!
 
-![Add a screenshot](./relative/path/to/img.jpg?raw=true)
-
-- step 3
-
-![Add a screenshot](./relative/path/to/img.jpg?raw=true)
-
-## Features
-
-- feature 1
-
-- feature 2
-
-- feature 3
+![Taking a quiz on Python](./assets/takeAnotherQuiz.gif)
 
 ## Tests
 
-- test 1
+- Use this command to run the testing program:
 
 ```shell
-# How to run the first test
-
+node_modules/.bin/cypress open
 ```
 
-- test 2
+![uses the command to start cypress](./assets/startCypress.gif)
+<br>
+<br>
+<br>
 
-```shell
-# How to run the second test
+- Run end-to-end tests:
 
-```
+![runs e2e tests](./assets/e2eTesting.gif)
+<br>
+<br>
+<br>
 
-- test 3
+- Run component tests:
 
-```shell
-# How to run the third test
-
-```
+![runs component tests](./assets/componentTesting.gif)
 
 ## Credits
 
