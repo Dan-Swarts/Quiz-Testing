@@ -64,11 +64,27 @@ npm run start
 
 ## Tests
 
-- Use this command to run the testing program:
+- Use these commands to run the testing program:
 
 ```shell
-node_modules/.bin/cypress open
+# runs end-to-end-tests
+npm run test
+
+# runs component tests
+npm run test:component
 ```
+
+### [Watch this video to see how to run the tests from the command line.](https://drive.google.com/file/d/1SD0M9clICjoXa1Mrvmzr3BRsQH_NSCXT/view?usp=sharing)
+
+IMPORTANT: ensure that your server is running with npm run start, and that the server is running on the same port found in cypress/e2e/spec_quiz.ts.
+
+### Alternatively, you can run tests from the cypress GUI with this command:
+
+```shell
+node_modules/.bin/cypress run
+```
+
+Then follow these instructions:
 
 ![uses the command to start cypress](./assets/startCypress.gif)
 <br>
